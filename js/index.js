@@ -5,13 +5,24 @@ const elCloseBtn = document.querySelector('.navbar__btn')
 const elNavbar = document.querySelectorAll('.navbar')
 const elHeader = document.querySelector('.header')
 
+const elNavLink = document.querySelectorAll('.navbar__link');
+
+
+
 elOpenBtn.addEventListener('click', () => {
-    elNavbar.forEach(item => item.classList.add('visible'))
+  elNavbar.forEach(item => item.classList.add('visible'))
 })
 
 elCloseBtn.addEventListener('click', () => {
-    elNavbar.forEach(item => item.classList.remove('visible'))
+  elNavbar.forEach(item => item.classList.remove('visible'))
 })
+
+elNavLink.forEach(link => {
+  link.addEventListener('click', (evt) => {
+    elNavbar.forEach(item => item.classList.remove('visible'))
+  })
+})
+
 
 
 const headerScroll = () => {
