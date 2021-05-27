@@ -15,7 +15,7 @@ elCloseBtn.addEventListener('click', () => {
 
 
 const headerScroll = () => {
-  if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight * 0.8) {
+  if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight * 0.3) {
     elHeader.classList.add('header-scroll');
   }
   if (window.pageYOffset == 0) {
@@ -92,15 +92,21 @@ const elProgress = document.querySelector('.order__progress')
 const elPrev = document.getElementById('order-prev')
 const elNext = document.getElementById('order-next')
 const circles = document.querySelectorAll('.order__circle')
-const elOrderText = document.querySelector('.order__text')
+const elOrderText = document.querySelectorAll('.order__text')
 
 
-const orderTextArr = ['Предварительная бесплатная консультация по телефону или онлайн', 'Встреча в офисе. Изучение документов, оценка перспективы дела', 'Заключаем договор/соглашение между клиентом и адвокатской конторой', 'Начинаем работу по согласованному делу вместе']
+elOrderText.forEach(item => {
+  item.style.display = 'none'
+})
+elOrderText[0].style.display = 'block'
 let currentActive = 1
 
 elNext.addEventListener('click', () => {
   currentActive++
-  elOrderText.textContent = orderTextArr[currentActive - 1]
+  elOrderText.forEach(item => {
+    item.style.display = 'none'
+  })
+  elOrderText[currentActive - 1].style.display = 'block'
 
   if (currentActive > circles.length) {
     currentActive = circles.length
@@ -111,7 +117,10 @@ elNext.addEventListener('click', () => {
 
 elPrev.addEventListener('click', () => {
   currentActive--
-  elOrderText.textContent = orderTextArr[currentActive - 1]
+  elOrderText.forEach(item => {
+    item.style.display = 'none'
+  })
+  elOrderText[currentActive - 1].style.display = 'block'
 
   if (currentActive < 1) {
     currentActive = 1

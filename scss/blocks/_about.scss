@@ -1,8 +1,37 @@
 .about {
-  padding: 30px 0;
+  padding: 40px 0;
   background-color: #ECECEC;
+}
+
+.about p, .about li {
+  font-size: 18px;
+}
+
+.about__container {
+  max-width: 1000px;
+}
+.about__subtitle {
+  margin-bottom: 20px;
 }
 
 .about__title {
   margin-bottom: 30px;
+}
+.about__text {
+  margin-bottom: 20px;
+}
+.about__suplist {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.about__list {
+  margin: 0;
+  padding: 0;
+}
+.about__item {
+  margin-bottom: 20px;
+}
+.about__sublist {
+  font-weight: 700;
+  margin-bottom: 50px;
 }

@@ -1,13 +1,15 @@
 .tabpanel {
   background-color: #fff;
   padding: 0 20px;
+  width: 40%;
 }
 .tabpanel__list {
   display: inline-block;
+  width: 100%;
 }
 .tabpanel__item {
   margin-bottom: 15px;
-  font-size: 15px;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
   background-color: rgba(#fff, 0.5);
@@ -44,6 +46,10 @@
 @include breakpoint-down (700) {
   .tabpanel {
     margin-bottom: 20px;
+    width: 100%;
+  }
+  .tabpanel__item {
+    width: 70%;
   }
 }
 @include breakpoint-down (440) {

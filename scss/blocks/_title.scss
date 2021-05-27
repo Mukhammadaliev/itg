@@ -10,9 +10,9 @@
   position: absolute;
   bottom: -6px;
   left: 50%;
-  margin-left: -15%;
-  width: 30%;
-  height: 3px;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 2px;
   background: #5B86D4;
   }
   &:before {
@@ -20,9 +20,23 @@
   position: absolute;
   bottom: 0px;
   left: 50%;
-  margin-left: -25%;
-  width: 50%;
-  height: 3px;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 2px;
   background: #5B86D4;
+  }
+  &--white {
+    &::after {
+      background-color: #fff;
+    }
+    &::before {
+      background-color: #fff;
+    }
+  }
+}
+
+@include breakpoint-down (700) {
+  .title {
+    font-size: 18px;
   }
 }

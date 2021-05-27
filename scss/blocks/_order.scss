@@ -3,19 +3,16 @@
 }
 
 .order__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 .order__title {
   margin-bottom: 40px;
 }
 .order__progress-wrapper {
   display: flex;
+  margin: 0 auto 30px;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 30px;
   max-width: 600px;
   width: 100%;
   &::after {
