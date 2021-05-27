@@ -18,7 +18,7 @@ elCloseBtn.addEventListener('click', () => {
 })
 
 elNavLink.forEach(link => {
-  link.addEventListener('click', (evt) => {
+  link.addEventListener('click', () => {
     elNavbar.forEach(item => item.classList.remove('visible'))
   })
 })
