@@ -64,12 +64,31 @@
   color: #5B86D4;
   font-weight: 700;
   text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    transform-origin: left;
+    transform: scaleX(0);
+    background-color: #5B86D4;
+    transition: transform 0.3s ease;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
 }
+
 
 
 @include breakpoint-down (890) {
   .navbar--blue {
-    width: 60%;
+    width: 70%;
   }
 }
 @include breakpoint-down (580) {
