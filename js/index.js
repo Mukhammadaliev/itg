@@ -24,13 +24,17 @@ elNavLink.forEach(link => {
 })
 
 
+const elSmallLogo = document.querySelector('.logo')
+
 
 const headerScroll = () => {
   if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight * 0.3) {
     elHeader.classList.add('header-scroll');
+    elSmallLogo.setAttribute('href', "#hero")
   }
   if (window.pageYOffset == 0) {
     elHeader.classList.remove('header-scroll')
+    elSmallLogo.setAttribute('href', "index.html")
   }
 }
 window.addEventListener('scroll', headerScroll)
