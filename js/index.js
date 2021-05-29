@@ -208,3 +208,13 @@ elTabs.addEventListener('click', (evt) => {
     })
   }
 })
+
+
+
+// FOOTER
+
+const footerDate = new Date().getFullYear();
+
+const footerText = document.querySelector('.footer__text')
+
+footerText.innerHTML = `© ${footerDate} Invest and Trade Group`
